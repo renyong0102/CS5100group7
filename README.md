@@ -1,3 +1,4 @@
+# CS5100 group7
 # Project Name: G7 Stock Price Prediction
 
 ## Project GitHub Link :
@@ -6,7 +7,6 @@ https://github.com/Dabaiee/CS5100group7
 
 ## 1. Creators
 
-# CS5100 group7
 - Tong Zhou
 - Zixuan Yang
 - Renyong Zheng
