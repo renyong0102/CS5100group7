@@ -7,7 +7,7 @@ function HomeComponent() {
                 {/*    Home</h1>*/}
             </div>
 
-            <div className="container" style={{marginTop:"50px", marginBottom:"10px", paddingBottom:"10px"}}>
+            <div className="container  text-white" style={{marginTop:"50px", marginBottom:"10px", paddingBottom:"10px"}}>
                 {/*<section className="bg-dark" style="margin-bottom:0px;padding-bottom:0px;">*/}
                     <div className="container">
                         <div className="row">

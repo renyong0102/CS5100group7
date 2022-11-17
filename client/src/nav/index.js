@@ -33,6 +33,10 @@ function NavbarContent() {
                         </li>
                     </ul>
                 </div>
+                <div className="float-end pe-2">
+                    <button className="btn btn-outline-secondary me-2">login</button>
+                    <button className="btn btn-primary">Get Started</button>
+                </div>
             </nav>
         </div>
     );

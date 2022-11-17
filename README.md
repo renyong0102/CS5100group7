@@ -26,3 +26,6 @@ A website platform that forecast the Stocks
 
 - Stock forecasting
 ![GitHub Logo](/InfoImg/stock0.jpg)
+
+- Stock forecasting
+![GitHub Logo](/InfoImg/market_page.png)
