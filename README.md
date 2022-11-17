@@ -32,8 +32,11 @@ A website platform that forecast the Stocks
 
 ## 4. PEAS Environment
 Performance Measures: accurate stock price forecast, accurate stock price trend
+
 Environment: shareholders, financial institutions, past stock data and trends
+
 Actuators: stock forecast UI, website, software
+
 Sensor: dataset API, crawler
 
 Rational depends on the performance measure that defines success. Stock prediction uses accurate stock price forecasts, accurate stock price trends as performance measures. Also, for each possible percept sequence, the stock prediction system selects an action expected to maximize its performance measure, given the evidence provided by the percept sequence and whatever built-in knowledge the agent has. For example, in stock prediction, system gives stock forecast UI based on dataset API and crawler.
