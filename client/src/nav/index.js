@@ -1,21 +1,24 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
-function Nav() {
+
+
+function NavbarContent() {
     const {pathname} = useLocation();
     const paths = pathname.split('/')
     const active = paths[2];
     return(
         <div className="">
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-                <a className="navbar-brand" href="#">My Stocks</a>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a className="navbar-brand" href="#">G7-STOCKS</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav navbar-right" style={{ maxHeight: '100px'}}>
                         <li className="nav-item active">
                             <a className="nav-link" href="/home">Home</a>
                         </li>
@@ -30,9 +33,12 @@ function Nav() {
                         </li>
                     </ul>
                 </div>
+                <div className="float-end pe-2">
+                    <button className="btn btn-outline-secondary me-2">login</button>
+                    <button className="btn btn-primary">Get Started</button>
+                </div>
             </nav>
-
         </div>
     );
 }
-export default Nav;
+export default NavbarContent;
