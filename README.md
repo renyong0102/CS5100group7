@@ -61,6 +61,6 @@ Jupyter, VSCode
 
 ### Packages and Frameworks
 
-Model:
+Model: sklearn, pandas, keras
 Frontend: bootstrap
 Backend: express
