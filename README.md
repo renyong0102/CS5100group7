@@ -30,8 +30,23 @@ A website platform that forecast the Stocks
 
 - Stock forecasting
   ![GitHub Logo](/InfoImg/market_page.png)
+  
+## 4.Targeted Environment
 
-## 4. PEAS Environment
+### Language
+Model: Python
+Frontend: javascript
+Backend: nodeJS
+
+### Development Environment
+Jupyter, VSCode
+
+### Packages and Frameworks
+Model: sklearn, pandas, keras
+Frontend: bootstrap
+Backend: express
+
+## 5. PEAS Environment
 
 Performance Measures: accurate stock price forecast, accurate stock price trend
 
@@ -46,22 +61,6 @@ Rational depends on the performance measure that defines success. Stock predicti
 For different financial institutions -> we need to use different dataset API -> website and stock forecast UI will be changed
 
 For past stock data and trends -> use crawler -> stock forecast UI, website, and software will be different
-
-
-## 5.Targeted Environment
-
-### Language
-Model: Python
-Frontend: javascript
-Backend: nodeJS
-
-### Development Environment
-Jupyter, VSCode
-
-### Packages and Frameworks
-Model: sklearn, pandas, keras
-Frontend: bootstrap
-Backend: express
 
 
 ![GitHub Logo](/InfoImg/PEAS_enviroment.png)
