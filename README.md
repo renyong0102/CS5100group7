@@ -46,3 +46,5 @@ For different financial institutions -> we need to use different dataset API -> 
 
 For past stock data and trends -> use crawler -> stock forecast UI, website, and software will be different
 
+![GitHub Logo](/InfoImg/PEAS_enviroment.png)
+
