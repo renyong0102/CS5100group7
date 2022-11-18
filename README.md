@@ -47,20 +47,21 @@ For different financial institutions -> we need to use different dataset API -> 
 
 For past stock data and trends -> use crawler -> stock forecast UI, website, and software will be different
 
+
 ## 5.Targeted Environment
 
 ### Language
-
 Model: Python
 Frontend: javascript
 Backend: nodeJS
 
 ### Development Environment
-
 Jupyter, VSCode
 
 ### Packages and Frameworks
-
 Model: sklearn, pandas, keras
 Frontend: bootstrap
 Backend: express
+
+
+![GitHub Logo](/InfoImg/PEAS_enviroment.png)
