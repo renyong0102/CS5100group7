@@ -30,9 +30,9 @@ function HomeComponent() {
                                 </a>
                                 <div>
                                     <h4>
-                                        Test
+                                        Market
                                     </h4>
-                                    <h5>All the test data</h5>
+                                    <h5>The Stock Market</h5>
                                 </div>
                             </div>
 
