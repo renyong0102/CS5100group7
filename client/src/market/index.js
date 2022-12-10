@@ -6,12 +6,12 @@ function MarketComponent() {
         <div>
             <div className="position-relative mb-2">
                 <img src="/images/banner.jpg" className="w-100"/>
-
             </div>
             <h1 className="text-white">
                 Market</h1>
             <Search/>
             <DatasetComponent/>
+
         </div>
     );
 }

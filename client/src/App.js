@@ -10,6 +10,7 @@ import HomeComponent from "./home";
 import MarketComponent from "./market";
 import NavbarContent from "./nav";
 import ShowDataComponent from "./showdata";
+import Candlestick from "./detail";
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
               <Routes>
                   <Route index path="/" element={<HomeComponent/>}/>
                   <Route index path="/home/*" element={<HomeComponent/>}/>
-                  <Route index path="/market/*" element={<MarketComponent/>}/>
-                  <Route index path="/showdata/*" element={<ShowDataComponent/>}/>
+                  <Route path="/market/*" element={<MarketComponent/>}/>
+                  <Route path="/showdata/*" element={<ShowDataComponent/>}/>
+                  <Route path="/graph/*" element={<Candlestick/>} />
               </Routes>
           </div>
       </BrowserRouter>
