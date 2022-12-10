@@ -1,1 +1,6 @@
-
+1. Data Validation (validating input)
+ 
+2. Testing for Actuators (if any)
+3. UI Testing (if applicable)
+ 
+4. ML Model(s) Testing (validation metrics wrt to various models such as Logistic Regression, Decision tree etc.)
