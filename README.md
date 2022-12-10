@@ -6,6 +6,16 @@
 
 https://github.com/Dabaiee/CS5100group7
 
+## How to run the website
+
+In the project directory /client, you can run:
+### `npm install`
+
+Wait until packages installed, then run:
+### `npm start`
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
 ## 1. Creators
 
 - Tong Zhou
