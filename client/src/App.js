@@ -9,6 +9,7 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import HomeComponent from "./home";
 import MarketComponent from "./market";
 import NavbarContent from "./nav";
+import ShowDataComponent from "./showdata";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                   <Route index path="/" element={<HomeComponent/>}/>
                   <Route index path="/home/*" element={<HomeComponent/>}/>
                   <Route index path="/market/*" element={<MarketComponent/>}/>
+                  <Route index path="/showdata/*" element={<ShowDataComponent/>}/>
               </Routes>
           </div>
       </BrowserRouter>
