@@ -23,7 +23,7 @@ function NavbarContent() {
                             <a className="nav-link" href="/home">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Dataset</a>
+                            <a className="nav-link" href="/showdata">Dataset</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="/market">Market</a>
