@@ -18,4 +18,5 @@ Actuators testing is not applicable in our project.
 
 ## 4. ML Model(s) Testing (validation metrics wrt to various models such as Logistic Regression, Decision tree etc.)
 
-    ![image](https://github.com/Dabaiee/CS5100group7/blob/main/Testing%20and%20QA%20Phase/InfoImg_test/p0.jpg)
+![image](https://user-images.githubusercontent.com/41896263/206850482-89f93bec-f832-4b9b-9d03-31da7462edd4.png)
+![image](https://user-images.githubusercontent.com/41896263/206850489-48f89f55-c176-4586-8be7-1f6c3e71c44d.png)
