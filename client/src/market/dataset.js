@@ -13,62 +13,38 @@ function DatasetComponent() {
                 </thead>
                 <tbody>
                 <tr className="table-active">
-                    <th scope="row">Active</th>
+                    <th scope="row">AAPL</th>
                     <td>Column content</td>
                     <td>Column content</td>
                     <td>Column content</td>
 
                 </tr>
                 <tr>
-                    <th scope="table-dark">Default</th>
+                    <th scope="table-dark">AMZN</th>
                     <td>Column content</td>
                     <td>Column content</td>
                     <td>Column content</td>
                 </tr>
                 <tr className="table-dark">
-                    <th scope="row">Primary</th>
+                    <th scope="row">ETH-USD</th>
                     <td>Column content</td>
                     <td>Column content</td>
                     <td>Column content</td>
                 </tr>
                 <tr className="table-dark">
-                    <th scope="row">Secondary</th>
+                    <th scope="row">META</th>
                     <td>Column content</td>
                     <td>Column content</td>
                     <td>Column content</td>
                 </tr>
                 <tr className="table-dark">
-                    <th scope="row">Success</th>
+                    <th scope="row">NFLX</th>
                     <td>Column content</td>
                     <td>Column content</td>
                     <td>Column content</td>
                 </tr>
                 <tr className="table-dark">
-                    <th scope="row">Danger</th>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr className="table-dark">
-                    <th scope="row">Warning</th>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr className="table-dark">
-                    <th scope="row">Info</th>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr className="table-dark">
-                    <th scope="row">Light</th>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr className="table-dark">
-                    <th scope="row">Dark</th>
+                    <th scope="row">TSLA</th>
                     <td>Column content</td>
                     <td>Column content</td>
                     <td>Column content</td>
