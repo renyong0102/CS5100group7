@@ -6,17 +6,11 @@ function AllDataComponent() {
     var txtFile = new XMLHttpRequest();
     txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
     txtFile.send()
-    //console.log("open")
-    // console.log(txtFile)
-    // console.log("txtFile.readyState = " + txtFile.readyState)
-    // console.log("txtFile.status = " + txtFile.status)
     txtFile.onreadystatechange = function () {
         // console.log("txtFile.readyState = " + txtFile.readyState)
         // console.log("txtFile.status = " + txtFile.status)
         if (txtFile.readyState === 4 && txtFile.status === 200) {
             setAllData(txtFile.responseText);
-            //console.log(lines)
-            // allTextLines = allText.split(/\r\n|\n/);
         }
     };
 
@@ -24,7 +18,6 @@ function AllDataComponent() {
         if (allData) {
             console.log("get all the Data");
             setLines(csvJSON(allData))
-            //setLines(allData.split(/\r\n|\n/))
             //console.log(allData);
         }
     }, [allData]);
@@ -54,84 +47,6 @@ function AllDataComponent() {
         }
         return result
     }
-
-
-//     function getData({allText}) {
-//         var txtFile = new XMLHttpRequest();
-//         txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
-//         txtFile.send()
-//         console.log("open")
-//         // console.log(txtFile)
-//         // console.log("txtFile.readyState = " + txtFile.readyState)
-//         // console.log("txtFile.status = " + txtFile.status)
-//         txtFile.onreadystatechange = function () {
-//             console.log("txtFile.readyState = " + txtFile.readyState)
-//             console.log("txtFile.status = " + txtFile.status)
-//             if (txtFile.readyState === 4 && txtFile.status === 200) {
-//                 allText = txtFile.responseText;
-//                 console.log(allText)
-//                 // allTextLines = allText.split(/\r\n|\n/);
-//             }
-//         };
-//     }
-//
-//     var allText;
-//     let myPromise = new Promise(function (myResolve, myReject) {
-// // "Producing Code" (May take some time)
-//         var txtFile = new XMLHttpRequest();
-//         txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
-//         txtFile.send()
-//         console.log("open")
-//         // console.log(txtFile)
-//         // console.log("txtFile.readyState = " + txtFile.readyState)
-//         // console.log("txtFile.status = " + txtFile.status)
-//         txtFile.onreadystatechange = function () {
-//             console.log("txtFile.readyState = " + txtFile.readyState)
-//             console.log("txtFile.status = " + txtFile.status)
-//             if (txtFile.readyState === 4 && txtFile.status === 200) {
-//                 allText = txtFile.responseText;
-//                 console.log(allText)
-//                 // allTextLines = allText.split(/\r\n|\n/);
-//             }
-//         };
-//
-//
-//         if (allText != null) {
-//             myResolve("allText ready " + allText); // when successful
-//         } else {
-//             myReject("No allText");  // when error
-//         }
-//     });
-//
-// // "Consuming Code" (Must wait for a fulfilled Promise)
-//     myPromise.then(
-//         function (value) { /* code if successful */
-//             console.log("allText finished ======== " + allText + " !!")
-//         },
-//         function (error) { /* code if some error */
-//             console.log("no allText  ======== ")
-//         }
-//     );
-
-    // function sleep(ms) {
-    //     return new Promise((resolve) => {
-    //         setTimeout(() => {
-    //             resolve('sleep for ' + ms + ' ms');
-    //         }, ms);
-    //     });
-    // }
-    //
-    // sleep(5000)
-
-    // useEffect(() => {
-    //     if (allText) {
-    //         console.log("update!!!!!!");
-    //         console.log(allText);
-    //     }
-    // }, [allText]);
-    // console.log("allText !!! ")
-    // console.log(allText)
-
 
     return (
         <div>
