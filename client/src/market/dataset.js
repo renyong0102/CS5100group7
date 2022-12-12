@@ -18,13 +18,12 @@ function DatasetComponent() {
         if (allData) {
             //console.log("get all the Data");
             //console.log(allData);
-            //const myArr = JSON.parse(allData);
             setStockInfos(JSON.parse(allData))
         }
     }, [allData]);
 
-    useEffect(() =>{
-        if(stockInfos){
+    useEffect(() => {
+        if (stockInfos) {
             console.log(stockInfos)
             console.log("stockInfos !!!!!!!")
         }
@@ -44,8 +43,8 @@ function DatasetComponent() {
                 </thead>
                 <tbody>
                 {stockInfos.map((stockInfo) => (
-                    <tr className="table-active" key = {stockInfo.asset}>
-                        <td><a href={"/detail/"+ stockInfo.asset}>{stockInfo.asset}</a></td>
+                    <tr className="table-active" key={stockInfo.asset}>
+                        <td><a href={"/detail/" + stockInfo.asset}>{stockInfo.asset}</a></td>
                         {/*<td>{stockInfo.asset}</td>*/}
                         <td>{stockInfo.marketCap}</td>
                         <td>{stockInfo.avgVOLUME}</td>

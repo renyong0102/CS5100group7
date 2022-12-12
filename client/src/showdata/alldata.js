@@ -2,56 +2,14 @@ import React, {useState, useEffect} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 function AllDataComponent() {
-    // var req = new XMLHttpRequest();
-    // console.log(document.location.href)
-    // req.open('GET', document.location.href, false);
-    // req.send(null);
-    // var headers = req.getAllResponseHeaders();
-    // console.log(headers);
-
-    // var url = window.location.href;
-    // console.log("url = " +url)
-    // var index = url.lastIndexOf("\/");
-    // var str = url.substring(index + 1,url.length);
-    // console.log(str);
-
-
-    // static async apiUpdateFavorites(req, res, next)
-    // {
-    //     try {
-    //         let name = req.params.name;
-    //         console.log("name == " + name);
-    //     } catch (e) {
-    //         console.log(`req, ${e}`);
-    //     }
-    // }
-
-
-    // static async apiGetFavorites(req, res, next) {
-    //     try {
-    //         let id = req.params.userId;
-    //         let favorites = await FavoritesDAO.getFavorites(id);
-    //         console.log("favorites = " + JSON.stringify(favorites));
-    //         if (!favorites) {
-    //             res.status(404).json({ error: "User Id not found" });
-    //             return;
-    //         }
-    //         res.json(favorites);
-    //     } catch(e) {
-    //         console.log(`API, ${e}`);
-    //         res.status(500).json({ error:e });
-    //     }
-    // }
     const [allData, setAllData] = useState('');
     const [lines, setLines] = useState([]);
-
 
     var url = window.location.href;
     //console.log("url = " + url)
     var index = url.lastIndexOf("\/");
     var stockName = url.substring(index + 1, url.length);
     // console.log(stockName);
-
 
     function GetAllData(name) {
         var txtFile = new XMLHttpRequest();
@@ -77,7 +35,6 @@ function AllDataComponent() {
                 console.log("stock name = " + stockName)
                 GetAllData(stockName)
             }
-
         }
     }, [stockName]);
 
@@ -148,13 +105,6 @@ function AllDataComponent() {
                 </tr>
                 </thead>
                 <tbody>
-                {/*<tr>*/}
-                {/*    <th scope="table-dark">2017-11-09</th>*/}
-                {/*    <td>308.644989</td>*/}
-                {/*    <td>329.451996</td>*/}
-                {/*    <td>307.056000</td>*/}
-                {/*    <td>320.884003</td>*/}
-                {/*</tr>*/}
                 {lines.map((line) => (
                     <tr key={line.Date}>
                         <th scope="table-dark">{line.Date}</th>
