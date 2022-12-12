@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Dropdown from 'react-bootstrap/Dropdown';
 
 function AllDataComponent() {
     const [allData, setAllData] = useState('');
@@ -50,6 +51,20 @@ function AllDataComponent() {
 
     return (
         <div>
+            <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                    Pick A Stock
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                    <Dropdown.Item href="/showdata/AAPL">AAPL</Dropdown.Item>
+                    <Dropdown.Item href="/showdata/AMZN">AMZN</Dropdown.Item>
+                    <Dropdown.Item href="/showdata/ETH-USD">ETH-USD</Dropdown.Item>
+                    <Dropdown.Item href="/showdata/META">META</Dropdown.Item>
+                    <Dropdown.Item href="/showdata/NFLX">NFLX</Dropdown.Item>
+                    <Dropdown.Item href="/showdata/TSLA">TSLA</Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
             <table className="table table-dark">
                 <thead>
                 <tr>
