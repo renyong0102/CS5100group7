@@ -59,7 +59,7 @@ function Training() {
         <div
             style={{
                 backgroundColor: "#222222",
-                color: "white",
+                color: "black",
                 textAlign: "center",
             }}
         >

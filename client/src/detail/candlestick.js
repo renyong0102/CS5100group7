@@ -268,24 +268,28 @@ function Candlestick() {
     };
 
     return (
-        <div
-            style={{
-                backgroundColor: "#222222",
-                color:"white",
-                textAlign: "center",
-            }}
-        >
-            <br />
-            <h2>ETH-USD price</h2>
-            <br />
-            <ReactApexChart
-                options={options}
-                series={series}
-                type="candlestick"
-                height={300}
-            />
-            <br />
+        <div>
+            <h2 className="text-white">ETH-USD price</h2>
+            <div
+                style={{
+                    backgroundColor: "#222222",
+                    color:"black",
+                    textAlign: "center",
+                }}
+            >
+                <br />
+
+                <br />
+                <ReactApexChart
+                    options={options}
+                    series={series}
+                    type="candlestick"
+                    height={300}
+                />
+                <br />
+            </div>
         </div>
+
     );
 }
 

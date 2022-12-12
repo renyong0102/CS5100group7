@@ -4,7 +4,7 @@ import Training from "./training";
 function Detail() {
     return(
         <div>
-            <h2>Detail</h2>
+            <h1 className="text-white">Stock Details</h1>
             <Candlestick/>
             <Training/>
         </div>
