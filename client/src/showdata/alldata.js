@@ -57,9 +57,9 @@ function AllDataComponent() {
         var txtFile = new XMLHttpRequest();
         // console.log("stock name = ")
         // console.log(name)
+        // txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
         var newUrl = "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/" + name + ".csv";
         // console.log("newUrl = " + newUrl)
-        //txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
         txtFile.open("GET", newUrl, true);
         txtFile.send()
         txtFile.onreadystatechange = function () {
@@ -118,7 +118,11 @@ function AllDataComponent() {
 
     return (
         <div>
-
+            <p class="h1 text-white bg-dark">
+                {
+                    stockName === "showdata"? ("Choose a stock name") : ("The data for stock " + stockName.toString())
+                }
+            </p>
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Pick A Stock
