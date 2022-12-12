@@ -2,28 +2,22 @@ import React from "react";
 import "../App.css";
 import ReactApexChart from "react-apexcharts";
 
-function Training() {
-    const series = [
+function Training(
+    {lines}, {name}
+) {
+
+
+    let series = [
         {
             name: "Valid",
-            data: [
-                555,
-                12038,
-                69030,
-                88369,
-                167466,
-                932638,
-                2055423,
-                3343777,
-                3845718,
-            ],
+            data: [],
         },
         {
             name: "Predict",
-            data: [28, 284, 9394, 42710, 76026, 191853, 501538, 1029651, 1255481],
+            data: [],
         },
     ];
-    const options = {
+    let options = {
         title: {
             text: 'Prediction & Validation',
             align: 'left'
@@ -54,6 +48,46 @@ function Training() {
             },
         },
     };
+
+    if (lines && lines.length> 0){
+        // console.log(lines)
+        let dates= []
+        let closes= []
+        let preds= []
+        for (let i in lines){
+            dates.push(lines[i].Date)
+            closes.push(lines[i].Close)
+            preds.push(lines[i].Predictions)
+        }
+        series[0].data = closes
+        series[1].data = preds
+        options.xaxis.categories = dates
+    }
+    else {
+        series = [
+            {
+                name: "Valid",
+                data: [
+                    555,
+                    12038,
+                    69030,
+                    88369,
+                    167466,
+                    932638,
+                    2055423,
+                    3343777,
+                    3845718,
+                ],
+            },
+            {
+                name: "Predict",
+                data: [28, 284, 9394, 42710, 76026, 191853, 501538, 1029651, 1255481],
+            },
+        ];
+    }
+
+    console.log(series)
+
 
     return (
         <div

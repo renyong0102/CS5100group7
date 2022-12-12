@@ -4,8 +4,8 @@ import React, {useState, useEffect} from 'react';
 
 function Detail() {
     const [allData, setAllData] = useState('');
+    const [data, setData] = useState('');
     const [lines, setLines] = useState([]);
-
     var url = window.location.href;
     //console.log("url = " + url)
     var index = url.lastIndexOf("\/");
@@ -30,11 +30,29 @@ function Detail() {
         };
     }
 
+    function getPredData(name) {
+        var txtFile = new XMLHttpRequest();
+        var newUrl = "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/test_predit_data/" + name + ".csv";
+        txtFile.open("GET", newUrl, true);
+        txtFile.send()
+        txtFile.onreadystatechange = function () {
+            // console.log("txtFile.readyState = " + txtFile.readyState)
+            // console.log("txtFile.status = " + txtFile.status)
+            if (txtFile.readyState === 4 && txtFile.status === 200) {
+                // console.log(txtFile.responseText);
+                const predRaw= txtFile.responseText
+                const predJson = csvJSON(predRaw)
+                // console.log(predJson)
+                setData(predJson)
+            }
+        };
+    }
     useEffect(() => {
         if (stockName) {
             if (stockName != "detail") {
                 console.log("stock name = " + stockName)
                 GetAllData(stockName)
+                getPredData(stockName)
             }
         }
     }, [stockName]);
@@ -46,14 +64,17 @@ function Detail() {
             setLines(csvJSON(allData))
             //console.log(allData);
         }
+
     }, [allData]);
 
     useEffect(() => {
-        if (lines) {
-            //console.log("getlines");
-            // console.log(lines);
+        if (data) {
+            //console.log("get all the Data");
+            // console.log(data);
         }
-    }, [lines]);
+
+    }, [data]);
+
 
     function csvJSON(csv) {
         const lines = csv.split('\n')
@@ -75,10 +96,11 @@ function Detail() {
     }
     return(
         <div>
+
             <h1 className="text-white">Stock Details</h1>
             <h2 className="text-white">prices</h2>
             <Candlestick lines={lines} name={stockName}/>
-            <Training/>
+            <Training lines={data} name={stockName}/>
         </div>
 
 
