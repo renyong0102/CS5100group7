@@ -50,15 +50,15 @@ function AllDataComponent() {
     //console.log("url = " + url)
     var index = url.lastIndexOf("\/");
     var stockName = url.substring(index + 1, url.length);
-    console.log(stockName);
+    // console.log(stockName);
 
 
     function GetAllData(name) {
         var txtFile = new XMLHttpRequest();
-        console.log("stock name = ")
-        console.log(name)
+        // console.log("stock name = ")
+        // console.log(name)
         var newUrl = "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/" + name + ".csv";
-        console.log("newUrl = " + newUrl)
+        // console.log("newUrl = " + newUrl)
         //txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
         txtFile.open("GET", newUrl, true);
         txtFile.send()
@@ -74,7 +74,6 @@ function AllDataComponent() {
     useEffect(() => {
         if (stockName) {
             if (stockName != "showdata") {
-                console.log("Come to stockName")
                 console.log("stock name = " + stockName)
                 GetAllData(stockName)
             }
@@ -85,7 +84,7 @@ function AllDataComponent() {
 
     useEffect(() => {
         if (allData) {
-            console.log("get all the Data");
+            //console.log("get all the Data");
             setLines(csvJSON(allData))
             //console.log(allData);
         }
@@ -93,7 +92,7 @@ function AllDataComponent() {
 
     useEffect(() => {
         if (lines) {
-            console.log("getlines");
+            //console.log("getlines");
             //console.log(lines);
         }
     }, [lines]);
@@ -153,7 +152,7 @@ function AllDataComponent() {
                 {/*    <td>320.884003</td>*/}
                 {/*</tr>*/}
                 {lines.map((line) => (
-                    <tr>
+                    <tr key={line.Date}>
                         <th scope="table-dark">{line.Date}</th>
                         <td>{line.Open}</td>
                         <td>{line.High}</td>
