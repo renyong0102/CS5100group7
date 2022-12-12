@@ -29,7 +29,7 @@ function NavbarContent() {
                             <a className="nav-link" href="/market">Market</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/detail">More</a>
+                            <a className="nav-link" href="/detail">Prediction</a>
                         </li>
                     </ul>
                 </div>
