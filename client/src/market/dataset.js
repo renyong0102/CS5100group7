@@ -45,8 +45,8 @@ function DatasetComponent() {
                 <tbody>
                 {stockInfos.map((stockInfo) => (
                     <tr className="table-active" key = {stockInfo.asset}>
-
-                        <td>{stockInfo.asset}</td>
+                        <td><a href={"/detail/"+ stockInfo.asset}>{stockInfo.asset}</a></td>
+                        {/*<td>{stockInfo.asset}</td>*/}
                         <td>{stockInfo.marketCap}</td>
                         <td>{stockInfo.avgVOLUME}</td>
                         <td>{stockInfo.primaryEXCHANGE}</td>
