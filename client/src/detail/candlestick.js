@@ -6,7 +6,7 @@ import ReactApexChart from "react-apexcharts";
 function Candlestick(
     {
         lines
-    }
+    },{name}
 ) {
     let series = [{
         data:[]
@@ -267,7 +267,7 @@ function Candlestick(
         }];
     }
 
-    // console.log(series)
+    // console.log({name})
 
 
     const options= {
@@ -291,7 +291,7 @@ function Candlestick(
 
     return (
         <div>
-            <h2 className="text-white">Sample prices</h2>
+
             <div
                 style={{
                     backgroundColor: "#222222",

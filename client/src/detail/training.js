@@ -67,7 +67,7 @@ function Training() {
             <ReactApexChart
                 options={options}
                 series={series}
-                type="area"
+                type="line"
                 height={300}
             />
         </div>

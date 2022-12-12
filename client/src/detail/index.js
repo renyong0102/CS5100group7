@@ -75,8 +75,9 @@ function Detail() {
     }
     return(
         <div>
-            <h1 className="text-white">Sample Stock Details</h1>
-            <Candlestick lines={lines}/>
+            <h1 className="text-white">Stock Details</h1>
+            <h2 className="text-white">prices</h2>
+            <Candlestick lines={lines} name={stockName}/>
             <Training/>
         </div>
 

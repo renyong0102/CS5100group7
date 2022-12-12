@@ -16,8 +16,9 @@ import Detail from "./detail";
 function App() {
   return (
       <BrowserRouter>
+          <NavbarContent clasName="container-expand"/>
           <div className="container">
-              <NavbarContent/>
+
               <Routes>
                   <Route index path="/" element={<HomeComponent/>}/>
                   <Route index path="/home/*" element={<HomeComponent/>}/>
