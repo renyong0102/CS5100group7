@@ -2,18 +2,86 @@ import React, {useState, useEffect} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 function AllDataComponent() {
+    // var req = new XMLHttpRequest();
+    // console.log(document.location.href)
+    // req.open('GET', document.location.href, false);
+    // req.send(null);
+    // var headers = req.getAllResponseHeaders();
+    // console.log(headers);
+
+    // var url = window.location.href;
+    // console.log("url = " +url)
+    // var index = url.lastIndexOf("\/");
+    // var str = url.substring(index + 1,url.length);
+    // console.log(str);
+
+
+    // static async apiUpdateFavorites(req, res, next)
+    // {
+    //     try {
+    //         let name = req.params.name;
+    //         console.log("name == " + name);
+    //     } catch (e) {
+    //         console.log(`req, ${e}`);
+    //     }
+    // }
+
+
+    // static async apiGetFavorites(req, res, next) {
+    //     try {
+    //         let id = req.params.userId;
+    //         let favorites = await FavoritesDAO.getFavorites(id);
+    //         console.log("favorites = " + JSON.stringify(favorites));
+    //         if (!favorites) {
+    //             res.status(404).json({ error: "User Id not found" });
+    //             return;
+    //         }
+    //         res.json(favorites);
+    //     } catch(e) {
+    //         console.log(`API, ${e}`);
+    //         res.status(500).json({ error:e });
+    //     }
+    // }
     const [allData, setAllData] = useState('');
     const [lines, setLines] = useState([]);
-    var txtFile = new XMLHttpRequest();
-    txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
-    txtFile.send()
-    txtFile.onreadystatechange = function () {
-        // console.log("txtFile.readyState = " + txtFile.readyState)
-        // console.log("txtFile.status = " + txtFile.status)
-        if (txtFile.readyState === 4 && txtFile.status === 200) {
-            setAllData(txtFile.responseText);
+
+
+    var url = window.location.href;
+    //console.log("url = " + url)
+    var index = url.lastIndexOf("\/");
+    var stockName = url.substring(index + 1, url.length);
+    console.log(stockName);
+
+
+    function GetAllData(name) {
+        var txtFile = new XMLHttpRequest();
+        console.log("stock name = ")
+        console.log(name)
+        var newUrl = "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/" + name + ".csv";
+        console.log("newUrl = " + newUrl)
+        //txtFile.open("GET", "https://raw.githubusercontent.com/Dabaiee/CS5100group7/main/datasets/ETH-USD.csv", true);
+        txtFile.open("GET", newUrl, true);
+        txtFile.send()
+        txtFile.onreadystatechange = function () {
+            // console.log("txtFile.readyState = " + txtFile.readyState)
+            // console.log("txtFile.status = " + txtFile.status)
+            if (txtFile.readyState === 4 && txtFile.status === 200) {
+                setAllData(txtFile.responseText);
+            }
+        };
+    }
+
+    useEffect(() => {
+        if (stockName) {
+            if (stockName != "showdata") {
+                console.log("Come to stockName")
+                console.log("stock name = " + stockName)
+                GetAllData(stockName)
+            }
+
         }
-    };
+    }, [stockName]);
+
 
     useEffect(() => {
         if (allData) {
@@ -26,7 +94,7 @@ function AllDataComponent() {
     useEffect(() => {
         if (lines) {
             console.log("getlines");
-            console.log(lines);
+            //console.log(lines);
         }
     }, [lines]);
 
@@ -51,6 +119,7 @@ function AllDataComponent() {
 
     return (
         <div>
+
             <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
                     Pick A Stock
