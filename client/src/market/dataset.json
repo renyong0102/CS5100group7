@@ -1,0 +1,38 @@
+[
+  {
+    "asset": "AAPL",
+    "marketCap": "$2.26T",
+    "avgVOLUME": "83.30M",
+    "primaryEXCHANGE": "NASDAQ"
+  },
+  {
+    "asset": "AMZN",
+    "marketCap": "$908.86B",
+    "avgVOLUME": "97.22M",
+    "primaryEXCHANGE": "NASDAQ"
+  },
+  {
+    "asset": "ETH-USD",
+    "marketCap": "",
+    "avgVOLUME": "",
+    "primaryEXCHANGE": ""
+  },
+  {
+    "asset": "META",
+    "marketCap": "$307.31B",
+    "avgVOLUME": "57.64M",
+    "primaryEXCHANGE": "NASDAQ"
+  },
+  {
+    "asset": "NFLX",
+    "marketCap": "$142.41B",
+    "avgVOLUME": "9.19M",
+    "primaryEXCHANGE": "NASDAQ"
+  },
+  {
+    "asset": "TSLA",
+    "marketCap": "$561.05B",
+    "avgVOLUME": "86.62M",
+    "primaryEXCHANGE": "NASDAQ"
+  }
+]
